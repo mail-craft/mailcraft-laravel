@@ -1,0 +1,53 @@
+{
+    "name": "mail-craft/mailcraft-laravel",
+    "description": "Official Laravel integration for MailCraft — a Mail transport, facade, and config publishing on top of mail-craft/mailcraft-php.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["email", "mailcraft", "laravel", "transactional-email", "smtp"],
+    "homepage": "https://github.com/mail-craft/mailcraft-laravel",
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/mail": "^10.0|^11.0|^12.0|^13.0",
+        "symfony/mailer": "^6.0|^7.0",
+        "mail-craft/mailcraft-php": "^0.1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^2.34",
+        "phpstan/phpstan": "^1.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "MailCraft\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MailCraft\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MailCraft\\Laravel\\MailCraftServiceProvider"
+            ],
+            "aliases": {
+                "MailCraft": "MailCraft\\Laravel\\Facades\\MailCraft"
+            }
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../php"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
