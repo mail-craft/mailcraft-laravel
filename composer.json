@@ -1,5 +1,6 @@
 {
     "name": "mail-craft/mailcraft-laravel",
+    "version": "1.0.0",
     "description": "Official Laravel integration for MailCraft — a Mail transport, facade, and config publishing on top of mail-craft/mailcraft-php.",
     "type": "library",
     "license": "MIT",
@@ -48,6 +49,5 @@
             "pestphp/pest-plugin": true
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "minimum-stability": "stable"
 }
